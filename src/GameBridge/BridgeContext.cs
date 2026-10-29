@@ -48,6 +48,7 @@ namespace IceyCoop.GameBridge
 
         public static void SetRole(bool isClient, bool isHost, bool isOffline)
         {
+            if (!isClient) World.ClientIsolation.RestoreLocalVisuals();
             IsClient = isClient;
             IsHost = isHost;
             IsOffline = isOffline;

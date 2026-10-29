@@ -1,8 +1,8 @@
 {
     "schemaVersion":  1,
     "product":  "ICEYCoop",
-    "version":  "2026.10.29-boss-p2-lite.1",
-    "buildId":  "0b3bd106acea",
+    "version":  "2026.10.29-visibility.1",
+    "buildId":  "df7238d23bbd",
     "architecture":  "windows-x64",
     "gameFiles":  [
                       {
@@ -29,43 +29,43 @@
     "files":  [
                   {
                       "path":  "BepInEx\\plugins\\IceyCoop.Bootstrap.dll",
-                      "sha256":  "FDAE885B622E1655309EFC6F85CD71788BDE5D12B2BC3AE7DBA581BD597DDA9C",
+                      "sha256":  "13EDBFE24621443D93BC0486F8C1340E484843DFD50EC759FD28384324F912D2",
                       "bytes":  10752,
                       "kind":  "mod"
                   },
                   {
                       "path":  "BepInEx\\plugins\\IceyCoop.Bridge.dll",
-                      "sha256":  "46ACDAE5FD72ABD4E7B33BCCA462498AB7AD202D9F6D95D3193F2BFD0150D5FD",
+                      "sha256":  "D532569882687840E17A5E65405DA3E417473B464F46EA68A4D2CF1EE4F72147",
                       "bytes":  6144,
                       "kind":  "mod"
                   },
                   {
                       "path":  "BepInEx\\icey-coop\\lib\\IceyCoop.GameBridge.dll",
-                      "sha256":  "0B3BD106ACEA6750C529743C5D88195453C8F8F77CC8FD4F5F6481DFE4023189",
-                      "bytes":  348160,
+                      "sha256":  "DF7238D23BBD38BD961708624ABBC388D4A4D311A19AF43062D3C84224031974",
+                      "bytes":  348672,
                       "kind":  "mod"
                   },
                   {
                       "path":  "BepInEx\\icey-coop\\lib\\IceyCoop.Core.dll",
-                      "sha256":  "E0A61CACC340D9C1B99D5364795A444805B5BB3ACE3CF3F0847D8693DC1A6CFF",
+                      "sha256":  "9875EF716A44BB3622F047A85C9248FD427DC871B91A9F9FE6F4E05DFE286B9F",
                       "bytes":  90112,
                       "kind":  "mod"
                   },
                   {
                       "path":  "BepInEx\\icey-coop\\lib\\IceyCoop.Bridge.dll",
-                      "sha256":  "46ACDAE5FD72ABD4E7B33BCCA462498AB7AD202D9F6D95D3193F2BFD0150D5FD",
+                      "sha256":  "D532569882687840E17A5E65405DA3E417473B464F46EA68A4D2CF1EE4F72147",
                       "bytes":  6144,
                       "kind":  "mod"
                   },
                   {
                       "path":  "BepInEx\\icey-coop\\lib\\IceyCoop.Protocol.dll",
-                      "sha256":  "8F08DF7573F2B66167A8ABAB09F489DDFA9F91FDFE77F6C9C7DA2793BB01B53E",
+                      "sha256":  "A0B11F79B9FAD6B733CC2038248043B923A0C9A7AADACA179ABE18B61A56AC64",
                       "bytes":  40960,
                       "kind":  "mod"
                   },
                   {
                       "path":  "BepInEx\\icey-coop\\lib\\IceyCoop.Transport.dll",
-                      "sha256":  "DE791FF104F3E086EAA687C0C9ACA6F3A4EA9E88E48B21F37C0A37C16230DE57",
+                      "sha256":  "2D445BDDF52B44EEF9151B3E55B508470125CF98970D2DC23868D70D1502FF19",
                       "bytes":  41472,
                       "kind":  "mod"
                   },

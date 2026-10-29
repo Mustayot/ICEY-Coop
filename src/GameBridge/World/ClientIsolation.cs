@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace IceyCoop.GameBridge.World
@@ -41,6 +42,40 @@ namespace IceyCoop.GameBridge.World
         /// hid; re-hides after a scene reload (fresh instance id).</summary>
         private static int lastHiddenShiInstanceId;
 
+        // Only own changes from enabled to disabled. Native hidden effects and
+        // inactive skeleton variants must keep their original visibility.
+        private static readonly List<Renderer> hiddenRenderers = new List<Renderer>();
+
+        private static int HideOwnedRenderers(GameObject root)
+        {
+            hiddenRenderers.RemoveAll(renderer => renderer == null);
+            int hidden = 0;
+            foreach (Renderer renderer in root.GetComponentsInChildren<Renderer>(true))
+            {
+                if (renderer == null || !renderer.enabled) continue;
+                hiddenRenderers.Add(renderer);
+                renderer.enabled = false;
+                hidden++;
+            }
+            return hidden;
+        }
+
+        /// <summary>Undo this isolation layer's visual changes when leaving client mode.</summary>
+        public static void RestoreLocalVisuals()
+        {
+            int restored = 0;
+            foreach (Renderer renderer in hiddenRenderers)
+            {
+                if (renderer == null) continue;
+                try { renderer.enabled = true; restored++; }
+                catch (Exception ex) { BridgeContext.Error("[iso] local visual restore failed: " + ex.Message); }
+            }
+            hiddenRenderers.Clear();
+            lastHiddenPlayerInstanceId = 0;
+            lastHiddenShiInstanceId = 0;
+            if (restored > 0) BridgeContext.Info("[iso] local visuals restored renderers=" + restored);
+        }
+
         /// <summary>
         /// T27 plan A: on a client, the local SHI runner is a leftover that would
         /// stand still (it reads a keyboard nobody presses). Hide its art so the
@@ -77,16 +112,7 @@ namespace IceyCoop.GameBridge.World
             }
             try
             {
-                Renderer[] renderers = go.GetComponentsInChildren<Renderer>(true);
-                int hidden = 0;
-                for (int i = 0; i < renderers.Length; i++)
-                {
-                    if (renderers[i] != null && renderers[i].enabled)
-                    {
-                        renderers[i].enabled = false;
-                        hidden++;
-                    }
-                }
+                int hidden = HideOwnedRenderers(go);
                 lastHiddenShiInstanceId = go.GetInstanceID();
                 BridgeContext.Info(string.Format("[t27] local shi visual hidden renderers={0}", hidden));
             }
@@ -126,16 +152,7 @@ namespace IceyCoop.GameBridge.World
             }
             try
             {
-                Renderer[] renderers = go.GetComponentsInChildren<Renderer>(true);
-                int hidden = 0;
-                for (int i = 0; i < renderers.Length; i++)
-                {
-                    if (renderers[i] != null && renderers[i].enabled)
-                    {
-                        renderers[i].enabled = false;
-                        hidden++;
-                    }
-                }
+                int hidden = HideOwnedRenderers(go);
                 lastHiddenPlayerInstanceId = go.GetInstanceID();
                 BridgeContext.Info(string.Format("[iso] local player visual hidden renderers={0}", hidden));
             }

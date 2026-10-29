@@ -44,7 +44,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tests/WebSetup.Tests.ps1
 
 ## 当前验证范围
 
-最新冻结构建 `0b3bd106acea`，协议 4。536 项纯逻辑回归通过；两份隔离游戏原生建房/加入/退出重开回归主机 44 项、客机 65 项通过。包含游戏内 F8 体检、Boss 静态血条绑定和 P2 自定义恢复小修。
+最新冻结构建 `df7238d23bbd`，协议 4。本版修复客机退出后的 P1/SHI 视觉恢复，专项11项断言与旧Mono生产构建通过。主机44项、客机65项原生流程属于上一版历史验证，本次未重跑游戏画面；完整逻辑回归结果见本次修复记录。
 
 这些结果不代表所有 Boss、完整主线、跨电脑公网或所有物理场景全验。不同难度下 Boss 最大血量/阶段同步仍待处理，原生战斗场地限制保留。详情见 [验收记录](installer/VALIDATION.md) 与 [最新小修交接](docs/交接-20261029-Boss与P2小修.md)。
 
@@ -58,3 +58,5 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tests/WebSetup.Tests.ps1
 - 历史提交和旧发布保留；不通过强制推送重写历史。
 
 第三方组件许可与对应源码见 installer/licenses、installer/third-party-source 及 installer/THIRD-PARTY.txt。
+
+新增：[客机视觉恢复修复与验证范围](docs/修复-20261029-客机视觉恢复.md)。

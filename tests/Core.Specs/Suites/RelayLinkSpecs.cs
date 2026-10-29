@@ -291,6 +291,10 @@ namespace IceyCoop.Tests.Suites
                                 Assert.True(WaitFor(delegate { return host.IsConnected; }, 3000),
                                     "the host notices the partner once its bytes arrive");
                                 Assert.True(host.PeerHeard, "peer heard flag set");
+                                // PeerHeard is set on the socket thread; OnFrame is
+                                // delivered by Poll. Wait for that separate boundary.
+                                Assert.True(WaitFor(delegate { return hostSink.Reliable.Count == 1; }, 3000),
+                                    "the partner frame is dispatched to the host callback");
                                 Assert.Equal(1, hostSink.Reliable.Count, "and the frame itself arrived");
                             }
                             finally { client.Disconnect(); }
