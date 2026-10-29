@@ -1,0 +1,169 @@
+{
+    "schemaVersion":  1,
+    "product":  "ICEYCoop",
+    "version":  "2026.10.29-boss-p2-lite.1",
+    "buildId":  "0b3bd106acea",
+    "architecture":  "windows-x64",
+    "gameFiles":  [
+                      {
+                          "path":  "ICEY.exe",
+                          "sha256":  "222991C803A16AC95716694133DD78EBA116B8907245F79867147A512EF3EF53"
+                      },
+                      {
+                          "path":  "steam_api64.dll",
+                          "sha256":  "B8246E1A629B945FE526B24C3E4F002C4F6EB86AA1B5ED9744399F22A0D2CA9F"
+                      },
+                      {
+                          "path":  "ICEY_Data\\Managed\\Assembly-CSharp.dll",
+                          "sha256":  "3969F0D5339CEF74A12E7C7B11932DB727EF1CEA5FD83D112DD1ACD718A998D7"
+                      },
+                      {
+                          "path":  "ICEY_Data\\Managed\\UnityEngine.dll",
+                          "sha256":  "8373002A1C3FCEF6C9E611F6B6B232AD972213B14B197EC17A2A6E42DC3EE565"
+                      },
+                      {
+                          "path":  "ICEY_Data\\Mono\\mono.dll",
+                          "sha256":  "52B6C65F0485FA22AA2ECD0CA2868EB44184E2F3CE4D4C8D27A4F8937A516BAF"
+                      }
+                  ],
+    "files":  [
+                  {
+                      "path":  "BepInEx\\plugins\\IceyCoop.Bootstrap.dll",
+                      "sha256":  "FDAE885B622E1655309EFC6F85CD71788BDE5D12B2BC3AE7DBA581BD597DDA9C",
+                      "bytes":  10752,
+                      "kind":  "mod"
+                  },
+                  {
+                      "path":  "BepInEx\\plugins\\IceyCoop.Bridge.dll",
+                      "sha256":  "46ACDAE5FD72ABD4E7B33BCCA462498AB7AD202D9F6D95D3193F2BFD0150D5FD",
+                      "bytes":  6144,
+                      "kind":  "mod"
+                  },
+                  {
+                      "path":  "BepInEx\\icey-coop\\lib\\IceyCoop.GameBridge.dll",
+                      "sha256":  "0B3BD106ACEA6750C529743C5D88195453C8F8F77CC8FD4F5F6481DFE4023189",
+                      "bytes":  348160,
+                      "kind":  "mod"
+                  },
+                  {
+                      "path":  "BepInEx\\icey-coop\\lib\\IceyCoop.Core.dll",
+                      "sha256":  "E0A61CACC340D9C1B99D5364795A444805B5BB3ACE3CF3F0847D8693DC1A6CFF",
+                      "bytes":  90112,
+                      "kind":  "mod"
+                  },
+                  {
+                      "path":  "BepInEx\\icey-coop\\lib\\IceyCoop.Bridge.dll",
+                      "sha256":  "46ACDAE5FD72ABD4E7B33BCCA462498AB7AD202D9F6D95D3193F2BFD0150D5FD",
+                      "bytes":  6144,
+                      "kind":  "mod"
+                  },
+                  {
+                      "path":  "BepInEx\\icey-coop\\lib\\IceyCoop.Protocol.dll",
+                      "sha256":  "8F08DF7573F2B66167A8ABAB09F489DDFA9F91FDFE77F6C9C7DA2793BB01B53E",
+                      "bytes":  40960,
+                      "kind":  "mod"
+                  },
+                  {
+                      "path":  "BepInEx\\icey-coop\\lib\\IceyCoop.Transport.dll",
+                      "sha256":  "DE791FF104F3E086EAA687C0C9ACA6F3A4EA9E88E48B21F37C0A37C16230DE57",
+                      "bytes":  41472,
+                      "kind":  "mod"
+                  },
+                  {
+                      "path":  "winhttp.dll",
+                      "sha256":  "8C6CDBC38836DEE87E3368F5DE1994D7C0CCEBF29E4CE7ABA3C0981F9375412C",
+                      "bytes":  26112,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  ".doorstop_version",
+                      "sha256":  "75A2F501000D4FE28F74BC7EE66DAE5581959D28B6C44F0C1B0C05CD5BA261E6",
+                      "bytes":  5,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "doorstop_config.ini",
+                      "sha256":  "4D5C6DFA0F771C6A5B1B0C559ACA0BD0ECE7D08B08FFF894708DC3B73CE73CFC",
+                      "bytes":  1460,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\0Harmony.dll",
+                      "sha256":  "1A21CC03424FC82C3DD1346905D16494536B9595AE4162228D99FB7C285C1031",
+                      "bytes":  204800,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\0Harmony20.dll",
+                      "sha256":  "C755A5AB2712915A32F9A850D580A8C1B70FF1653BC76600F2767AA8FFCCC663",
+                      "bytes":  112640,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\BepInEx.dll",
+                      "sha256":  "8255B28902886085C578B9E427D3073C97002DB85176D2090CDEDA90EF14CE70",
+                      "bytes":  128512,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\BepInEx.Harmony.dll",
+                      "sha256":  "00C8F2AC48593E4D45CE4EB26CE4E68B18113C5C489B38B8BF0850F65830D601",
+                      "bytes":  6656,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\BepInEx.Preloader.dll",
+                      "sha256":  "55D3895351A9D16B63B6F35F1C01B44AC650979E853D0BD3A442B92A082AF64F",
+                      "bytes":  43008,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\HarmonyXInterop.dll",
+                      "sha256":  "7CE1342D3AFA0334B59A3E38C0AED15E162B9ABE9D46F95F34BE44AF47F3B493",
+                      "bytes":  23552,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\Mono.Cecil.dll",
+                      "sha256":  "7AE470288FFF4A402899C254D0A76CEFEF55877F5C54F96E83C797CC5BB6E2F6",
+                      "bytes":  339456,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\Mono.Cecil.Mdb.dll",
+                      "sha256":  "5896D1898F616701FFF18F3B2C71E6B844D2390EF9F41E1C5FCCCE8CB27C698E",
+                      "bytes":  43008,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\Mono.Cecil.Pdb.dll",
+                      "sha256":  "174DB44A067F58561510AF746F3CAEB032037762C57A31C8D9EE32DB25174984",
+                      "bytes":  86528,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\Mono.Cecil.Rocks.dll",
+                      "sha256":  "54AC539FB5DDC8B44C0E9ACD0FCB7324F89D1A072EDF8EBC1B06DD691E3D3927",
+                      "bytes":  27648,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\MonoMod.RuntimeDetour.dll",
+                      "sha256":  "40E49BB314391CD7BDDC2644F8553EEBA92C194B940836B103DF16955C464E0C",
+                      "bytes":  105984,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\core\\MonoMod.Utils.dll",
+                      "sha256":  "9D1495F147AC93C4F81F84538C1A326E8F8A6AEFC78D6289D798F3CE1162C5E9",
+                      "bytes":  187904,
+                      "kind":  "loader"
+                  },
+                  {
+                      "path":  "BepInEx\\config\\BepInEx.cfg",
+                      "sha256":  "3E1FBCFD1A2B15FE2F045027BF1E5400AC01F4E723F6C399C2799D997A80865D",
+                      "bytes":  128,
+                      "kind":  "config"
+                  }
+              ]
+}

@@ -1,0 +1,43 @@
+name: Publish installer
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - installer/manifest.json
+      - .github/workflows/release.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: installer-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package frozen runtime and publish installer
+        shell: powershell
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $manifest = Get-Content installer/manifest.json -Raw | ConvertFrom-Json
+          $tag = 'v' + $manifest.version
+          $releasesJson = & gh release list --limit 100 --json tagName
+          if ($LASTEXITCODE -ne 0) { throw 'Could not list existing releases' }
+          $existing = @($releasesJson | ConvertFrom-Json | Where-Object { $_.tagName -eq $tag })
+          if ($existing.Count -gt 0) {
+            Write-Output ('Release already exists; preserving assets: ' + $tag)
+            exit 0
+          }
+          & powershell -NoProfile -ExecutionPolicy Bypass -File tools/pack-health-release.ps1
+          if ($LASTEXITCODE -ne 0) { throw 'Package verification failed' }
+          $zip = Join-Path 'artifacts/dist' ('ICEYCoop-GameHealth-20261029-' + $manifest.buildId + '.zip')
+          & gh release create $tag $zip ($zip + '.sha256') --target $env:GITHUB_SHA --title ('ICEY Coop ' + $manifest.version) --notes-file installer/RELEASE-NOTES.md
+          if ($LASTEXITCODE -ne 0) { throw 'Release publication failed' }

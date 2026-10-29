@@ -1,0 +1,21 @@
+{
+    "configuration":  "BossP2Lite",
+    "csc":  "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\csc.exe",
+    "outputs":  [
+                    "IceyCoop.Bridge.dll",
+                    "IceyCoop.Core.dll",
+                    "IceyCoop.Protocol.dll",
+                    "IceyCoop.Transport.dll",
+                    "IceyCoop.GameBridge.dll",
+                    "IceyCoop.Bootstrap.dll"
+                ],
+    "outputsSha256":  {
+                          "IceyCoop.Transport.dll":  "DE791FF104F3E086EAA687C0C9ACA6F3A4EA9E88E48B21F37C0A37C16230DE57",
+                          "IceyCoop.Core.dll":  "E0A61CACC340D9C1B99D5364795A444805B5BB3ACE3CF3F0847D8693DC1A6CFF",
+                          "IceyCoop.Bridge.dll":  "46ACDAE5FD72ABD4E7B33BCCA462498AB7AD202D9F6D95D3193F2BFD0150D5FD",
+                          "IceyCoop.GameBridge.dll":  "0B3BD106ACEA6750C529743C5D88195453C8F8F77CC8FD4F5F6481DFE4023189",
+                          "IceyCoop.Bootstrap.dll":  "FDAE885B622E1655309EFC6F85CD71788BDE5D12B2BC3AE7DBA581BD597DDA9C",
+                          "IceyCoop.Protocol.dll":  "8F08DF7573F2B66167A8ABAB09F489DDFA9F91FDFE77F6C9C7DA2793BB01B53E"
+                      },
+    "builtAt":  "2026-10-29T10:39:07.5857826+08:00"
+}

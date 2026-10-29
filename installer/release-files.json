@@ -1,0 +1,212 @@
+[
+    {
+        "path":  "Setup.cmd",
+        "bytes":  1004,
+        "sha256":  "030026E000B8553ECB7AFD0FDB17196D446814BF3FC941B03249CB0E864DAA8D"
+    },
+    {
+        "path":  "Setup.ps1",
+        "bytes":  2460,
+        "sha256":  "C444239DB9674BF74C65A971F560E2885BDEB8AB321BEE0ACF0AA3E96B904287"
+    },
+    {
+        "path":  "Installer.Core.ps1",
+        "bytes":  48096,
+        "sha256":  "FB70A03BF32FBA57C1B205D0D1753353289AF671C9688046754FFD6315224AEA"
+    },
+    {
+        "path":  "Setup.Gui.ps1",
+        "bytes":  20181,
+        "sha256":  "6B05A3A452B665C647A0502C197F50E6F6BBA333EAF0215DBE32E7804421B811"
+    },
+    {
+        "path":  "Setup.Web.ps1",
+        "bytes":  29822,
+        "sha256":  "90F9D41B773A42BA2B6EA6337641ED5FC796413858204BD8E8D744659B960428"
+    },
+    {
+        "path":  "Setup.ui.html",
+        "bytes":  33638,
+        "sha256":  "89CAAF127C27034B915774D5B05A2C9007B506C2A969797509CEC3E7563979B3"
+    },
+    {
+        "path":  "manifest.json",
+        "bytes":  7953,
+        "sha256":  "A0A23B29CE289F059D67421C50F547B03428CEBCA951F9F1EEC8F16F7CFDB3DD"
+    },
+    {
+        "path":  "build-info.json",
+        "bytes":  1238,
+        "sha256":  "21374E82F0B1AD3C5C9CA5D9E1D8F50EC858B2E07B681B1AB8E3035D5412E143"
+    },
+    {
+        "path":  "README.md",
+        "bytes":  3879,
+        "sha256":  "544B1210D2247BA730B1662D1FF09A094B482130BF6D0F81B1332B89DFCDFA2E"
+    },
+    {
+        "path":  "THIRD-PARTY.txt",
+        "bytes":  739,
+        "sha256":  "84539EB6D5FE1A351D1DC87ADD340F6CB447A7BFE607060A2A448D2091EF47CB"
+    },
+    {
+        "path":  "LICENSE",
+        "bytes":  1065,
+        "sha256":  "C45FD6C7EFF2FA39E2E07AEBB1BF6A2FBB6B16E1FD17BE627E9C9873A94EF965"
+    },
+    {
+        "path":  "VALIDATION.md",
+        "bytes":  6734,
+        "sha256":  "7BC53F1A2DD990706E45F7F396DF8DEEBFF7B9203B691288DE51CCF60416186A"
+    },
+    {
+        "path":  "GameHealth.md",
+        "bytes":  3934,
+        "sha256":  "36C91449E37AB8319F66339B26377826FA9BECDF8F53C6671211B9F755DF8D0C"
+    },
+    {
+        "path":  "payload/BepInEx/plugins/IceyCoop.Bootstrap.dll",
+        "bytes":  10752,
+        "sha256":  "FDAE885B622E1655309EFC6F85CD71788BDE5D12B2BC3AE7DBA581BD597DDA9C"
+    },
+    {
+        "path":  "payload/BepInEx/plugins/IceyCoop.Bridge.dll",
+        "bytes":  6144,
+        "sha256":  "46ACDAE5FD72ABD4E7B33BCCA462498AB7AD202D9F6D95D3193F2BFD0150D5FD"
+    },
+    {
+        "path":  "payload/BepInEx/icey-coop/lib/IceyCoop.GameBridge.dll",
+        "bytes":  348160,
+        "sha256":  "0B3BD106ACEA6750C529743C5D88195453C8F8F77CC8FD4F5F6481DFE4023189"
+    },
+    {
+        "path":  "payload/BepInEx/icey-coop/lib/IceyCoop.Core.dll",
+        "bytes":  90112,
+        "sha256":  "E0A61CACC340D9C1B99D5364795A444805B5BB3ACE3CF3F0847D8693DC1A6CFF"
+    },
+    {
+        "path":  "payload/BepInEx/icey-coop/lib/IceyCoop.Bridge.dll",
+        "bytes":  6144,
+        "sha256":  "46ACDAE5FD72ABD4E7B33BCCA462498AB7AD202D9F6D95D3193F2BFD0150D5FD"
+    },
+    {
+        "path":  "payload/BepInEx/icey-coop/lib/IceyCoop.Protocol.dll",
+        "bytes":  40960,
+        "sha256":  "8F08DF7573F2B66167A8ABAB09F489DDFA9F91FDFE77F6C9C7DA2793BB01B53E"
+    },
+    {
+        "path":  "payload/BepInEx/icey-coop/lib/IceyCoop.Transport.dll",
+        "bytes":  41472,
+        "sha256":  "DE791FF104F3E086EAA687C0C9ACA6F3A4EA9E88E48B21F37C0A37C16230DE57"
+    },
+    {
+        "path":  "payload/winhttp.dll",
+        "bytes":  26112,
+        "sha256":  "8C6CDBC38836DEE87E3368F5DE1994D7C0CCEBF29E4CE7ABA3C0981F9375412C"
+    },
+    {
+        "path":  "payload/.doorstop_version",
+        "bytes":  5,
+        "sha256":  "75A2F501000D4FE28F74BC7EE66DAE5581959D28B6C44F0C1B0C05CD5BA261E6"
+    },
+    {
+        "path":  "payload/doorstop_config.ini",
+        "bytes":  1460,
+        "sha256":  "4D5C6DFA0F771C6A5B1B0C559ACA0BD0ECE7D08B08FFF894708DC3B73CE73CFC"
+    },
+    {
+        "path":  "payload/BepInEx/core/0Harmony.dll",
+        "bytes":  204800,
+        "sha256":  "1A21CC03424FC82C3DD1346905D16494536B9595AE4162228D99FB7C285C1031"
+    },
+    {
+        "path":  "payload/BepInEx/core/0Harmony20.dll",
+        "bytes":  112640,
+        "sha256":  "C755A5AB2712915A32F9A850D580A8C1B70FF1653BC76600F2767AA8FFCCC663"
+    },
+    {
+        "path":  "payload/BepInEx/core/BepInEx.dll",
+        "bytes":  128512,
+        "sha256":  "8255B28902886085C578B9E427D3073C97002DB85176D2090CDEDA90EF14CE70"
+    },
+    {
+        "path":  "payload/BepInEx/core/BepInEx.Harmony.dll",
+        "bytes":  6656,
+        "sha256":  "00C8F2AC48593E4D45CE4EB26CE4E68B18113C5C489B38B8BF0850F65830D601"
+    },
+    {
+        "path":  "payload/BepInEx/core/BepInEx.Preloader.dll",
+        "bytes":  43008,
+        "sha256":  "55D3895351A9D16B63B6F35F1C01B44AC650979E853D0BD3A442B92A082AF64F"
+    },
+    {
+        "path":  "payload/BepInEx/core/HarmonyXInterop.dll",
+        "bytes":  23552,
+        "sha256":  "7CE1342D3AFA0334B59A3E38C0AED15E162B9ABE9D46F95F34BE44AF47F3B493"
+    },
+    {
+        "path":  "payload/BepInEx/core/Mono.Cecil.dll",
+        "bytes":  339456,
+        "sha256":  "7AE470288FFF4A402899C254D0A76CEFEF55877F5C54F96E83C797CC5BB6E2F6"
+    },
+    {
+        "path":  "payload/BepInEx/core/Mono.Cecil.Mdb.dll",
+        "bytes":  43008,
+        "sha256":  "5896D1898F616701FFF18F3B2C71E6B844D2390EF9F41E1C5FCCCE8CB27C698E"
+    },
+    {
+        "path":  "payload/BepInEx/core/Mono.Cecil.Pdb.dll",
+        "bytes":  86528,
+        "sha256":  "174DB44A067F58561510AF746F3CAEB032037762C57A31C8D9EE32DB25174984"
+    },
+    {
+        "path":  "payload/BepInEx/core/Mono.Cecil.Rocks.dll",
+        "bytes":  27648,
+        "sha256":  "54AC539FB5DDC8B44C0E9ACD0FCB7324F89D1A072EDF8EBC1B06DD691E3D3927"
+    },
+    {
+        "path":  "payload/BepInEx/core/MonoMod.RuntimeDetour.dll",
+        "bytes":  105984,
+        "sha256":  "40E49BB314391CD7BDDC2644F8553EEBA92C194B940836B103DF16955C464E0C"
+    },
+    {
+        "path":  "payload/BepInEx/core/MonoMod.Utils.dll",
+        "bytes":  187904,
+        "sha256":  "9D1495F147AC93C4F81F84538C1A326E8F8A6AEFC78D6289D798F3CE1162C5E9"
+    },
+    {
+        "path":  "payload/BepInEx/config/BepInEx.cfg",
+        "bytes":  128,
+        "sha256":  "3E1FBCFD1A2B15FE2F045027BF1E5400AC01F4E723F6C399C2799D997A80865D"
+    },
+    {
+        "path":  "licenses/BepInEx-MIT.txt",
+        "bytes":  1062,
+        "sha256":  "E6E534EF6F4347B6449407EE046A3D09CB0174C6F688C996AD0BED94B74B3933"
+    },
+    {
+        "path":  "licenses/HarmonyX-MIT.txt",
+        "bytes":  1063,
+        "sha256":  "7E54AB4766EF78637A05FB3454663A66DE6BB960DBD4C7088890ED76B0844F36"
+    },
+    {
+        "path":  "licenses/Mono.Cecil-MIT.txt",
+        "bytes":  1098,
+        "sha256":  "13D58ECBED676511C0C4C4009BFF107025E50007FF5E7901DC562700EC62509E"
+    },
+    {
+        "path":  "licenses/MonoMod-MIT.txt",
+        "bytes":  1080,
+        "sha256":  "0B64833222E3C6A426AD29362D26334619FE02EAF2B89EA9C37805521896C920"
+    },
+    {
+        "path":  "licenses/UnityDoorstop-LGPL-2.1.txt",
+        "bytes":  26526,
+        "sha256":  "20C17D8B8C48A600800DFD14F95D5CB9FF47066A9641DDEAB48DC54AEC96E331"
+    },
+    {
+        "path":  "third-party-source/UnityDoorstop-v4.5.0-source.zip",
+        "bytes":  109881,
+        "sha256":  "7F0C963104AA08BF5FEFEF8FF85E7FECD8306838F5AF3101487D9DB4E9188D63"
+    }
+]

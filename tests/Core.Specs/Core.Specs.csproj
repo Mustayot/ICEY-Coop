@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>Core.Specs</AssemblyName>
+    <RootNamespace>IceyCoop.Tests</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\src\Core\*.cs" Link="Core\%(Filename)%(Extension)" />
+    <Compile Include="..\..\src\Protocol\*.cs" Link="Protocol\%(Filename)%(Extension)" />
+    <Compile Include="..\..\src\Transport\*.cs" Link="Transport\%(Filename)%(Extension)" />
+    <Compile Include="..\..\src\GameBridge\Network\JoinTransaction.cs" Link="Network\JoinTransaction.cs" />
+    <Compile Include="..\..\src\GameBridge\Network\InputAdapter.cs" Link="Network\InputAdapter.cs" />
+    <Compile Include="..\..\src\GameBridge\Network\ReconnectCredentialStore.cs" Link="Network\ReconnectCredentialStore.cs" />
+    <Compile Include="..\..\src\GameBridge\Network\PendingJoinAdmission.cs" Link="Network\PendingJoinAdmission.cs" />
+    <Compile Include="..\..\src\GameBridge\Network\SessionTermination.cs" Link="Network\SessionTermination.cs" />
+    <Compile Include="..\..\src\GameBridge\Actors\RoomEndRequest.cs" Link="Actors\RoomEndRequest.cs" />
+  </ItemGroup>
+
+</Project>

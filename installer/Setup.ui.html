@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>ICEY · 双人联机安装</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { height: 100%; background: #080b0d; }
+  body {
+    margin: 0; min-width: 320px; min-height: 100%; background: #080b0d;
+    color: #e6e9e8; font-family: "Segoe UI", "Microsoft YaHei UI", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    font-weight: 400; -webkit-font-smoothing: antialiased;
+  }
+  button, input { font: inherit; }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; }
+  :focus-visible { outline: 2px solid #7ed1d2; outline-offset: 5px; }
+  ::selection { background: #7ed1d2; color: #080b0d; }
+  .page {
+    width: 100%; max-width: 1510px; min-height: 100svh; margin: 0 auto;
+    padding: 35px 59px 24px; display: flex; flex-direction: column;
+  }
+  .masthead { display: flex; align-items: flex-start; justify-content: space-between; min-height: 39px; }
+  .minor-brand { font-size: 12px; line-height: 16px; letter-spacing: .08em; color: #e6e9e8; }
+  .minor-track { display: flex; gap: 3px; margin-top: 10px; width: 133px; }
+  .minor-track i { display: block; flex: 1; height: 2px; background: #344145; }
+  .minor-track i:nth-child(-n+5) { background: #7ed1d2; }
+  .top-right { font-size: 11px; letter-spacing: .13em; color: #8d999c; padding-top: 2px; }
+  .hero {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .81fr);
+    align-items: end; column-gap: 34px; min-height: 205px; padding-bottom: 32px;
+  }
+  .wordmark {
+    margin: 0 0 0 -8px; white-space: nowrap;
+    font-family: "Arial Narrow", "Segoe UI Light", "Segoe UI", sans-serif;
+    font-weight: 200; font-size: clamp(108px, 12vw, 178px); line-height: .79;
+    letter-spacing: -.105em; color: #e6e9e8;
+  }
+  .wordmark span:last-child { display: inline-block; transform: translateY(2px); }
+  .hero-under { display: flex; gap: 21px; align-items: center; margin-top: 27px; }
+  .hero-under .stroke { width: 62px; height: 2px; background: #7ed1d2; }
+  .hero-under small { font-size: 11px; color: #8d999c; letter-spacing: .19em; }
+  .hero-copy { padding-bottom: 2px; }
+  .hero-copy h1 { font-weight: 350; letter-spacing: .075em; font-size: clamp(27px, 3.1vw, 44px); margin: 0 0 14px; line-height: 1.12; }
+  .hero-copy p { font-size: 13px; line-height: 1.85; letter-spacing: .025em; color: #8d999c; margin: 0; }
+  .workarea {
+    border-top: 1px solid #344145; padding-top: 31px; display: grid;
+    grid-template-columns: minmax(0, 1.13fr) minmax(0, .87fr);
+    column-gap: clamp(44px, 7.6vw, 128px); flex: 1; min-height: 320px;
+  }
+  .setup { display: flex; flex-direction: column; min-width: 0; }
+  .section-header { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; }
+  .section-header h2 { font-size: 15px; line-height: 21px; font-weight: 500; letter-spacing: .04em; margin: 0; }
+  .section-header .aside { color: #8d999c; font-size: 11px; white-space: nowrap; }
+  .discovery { margin-top: 17px; min-height: 50px; max-height: 81px; overflow: auto; scrollbar-width: thin; scrollbar-color: #344145 transparent; }
+  .discovery-empty { margin: 0; font-size: 12px; line-height: 22px; color: #8d999c; }
+  .discovery button {
+    display: grid; grid-template-columns: 14px minmax(0,1fr) auto;
+    align-items: center; gap: 10px; padding: 6px 5px 6px 0; width: 100%; border: 0;
+    background: transparent; color: #e6e9e8; text-align: left;
+  }
+  .discovery button + button { margin-top: 2px; }
+  .disc-marker { width: 7px; height: 7px; border: 1px solid #8d999c; transform: rotate(45deg); }
+  .discovery button[aria-pressed="true"] .disc-marker { border-color: #7ed1d2; background: #7ed1d2; }
+  .disc-label { font-size: 12px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .disc-installed { font-size: 11px; color: #7ed1d2; white-space: nowrap; }
+  .discovery button:hover .disc-label { color: #7ed1d2; }
+  .directory-field { display: flex; align-items: stretch; gap: 11px; margin-top: 16px; width: 100%; }
+  .directory-field input {
+    display: block; background: transparent; border: 0; border-bottom: 1px solid #647074;
+    border-radius: 0; min-width: 0; flex: 1; padding: 10px 0 10px;
+    font-size: 13px; line-height: 20px; color: #e6e9e8; outline: none;
+  }
+  .directory-field input::placeholder { color: #8d999c; }
+  .directory-field input:focus { border-bottom-color: #7ed1d2; }
+  .directory-field input:disabled { color: #8d999c; }
+  .browse {
+    align-self: stretch; border: 1px solid #647074; background: transparent;
+    color: #e6e9e8; border-radius: 1px; min-width: 96px;
+    font-size: 12px; letter-spacing: .06em; padding: 0 13px;
+  }
+  .browse:hover:not(:disabled), .secondary:hover:not(:disabled) { border-color: #7ed1d2; color: #7ed1d2; }
+  .browse:disabled, .secondary:disabled { opacity: .46; }
+  .path-message { min-height: 22px; padding-top: 8px; color: #8d999c; font-size: 11px; line-height: 1.5; }
+  .path-message[data-tone="valid"] { color: #7ed1d2; }
+  .path-message[data-tone="error"] { color: #db7777; }
+  .actions { display: flex; align-items: stretch; gap: 13px; margin-top: 36px; flex-wrap: nowrap; }
+  .primary {
+    border: 1px solid #7ed1d2; border-radius: 1px; color: #080b0d;
+    background: #7ed1d2; min-height: 56px; width: 44%; max-width: 234px;
+    font-size: 17px; font-weight: 600; letter-spacing: .06em; white-space: nowrap;
+    text-align: left; padding: 0 19px; display: flex; align-items: center; justify-content: space-between; gap: 9px;
+  }
+  .primary .primary-arrow { width: 21px; height: 1px; background: #080b0d; position: relative; flex-shrink: 0; }
+  .primary .primary-arrow::after { content: ""; position: absolute; right: 0; top: -4px; width: 8px; height: 8px; border-top: 1px solid #080b0d; border-right: 1px solid #080b0d; transform: rotate(45deg); }
+  .primary:hover:not(:disabled) { background: #e6e9e8; border-color: #e6e9e8; }
+  .primary:disabled { background: #344145; border-color: #344145; color: #8d999c; }
+  .primary:disabled .primary-arrow { background: #8d999c; }
+  .primary:disabled .primary-arrow::after { border-color: #8d999c; }
+  .secondary {
+    min-height: 56px; padding: 0 21px; border: 1px solid #647074; background: transparent;
+    color: #e6e9e8; border-radius: 1px; font-size: 13px; white-space: nowrap;
+  }
+  .danger {
+    min-height: 56px; padding: 0 3px 0 8px; border: 0; background: transparent;
+    color: #b6a1a2; font-size: 12px; white-space: nowrap; text-underline-offset: 5px;
+  }
+  .danger:hover:not(:disabled) { color: #db7777; text-decoration: underline; }
+  .danger:disabled { opacity: .42; }
+  .operation-note { color: #8d999c; font-size: 11px; line-height: 1.6; margin: 16px 0 0; }
+  .monitor {
+    border-left: 1px solid #344145; padding-left: 31px; display: flex; flex-direction: column;
+    min-width: 0; padding-bottom: 4px;
+  }
+  .monitor-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .monitor-heading h2 { font-size: 15px; line-height: 21px; font-weight: 500; margin: 0; }
+  .monitor-heading .build { color: #8d999c; font-size: 10px; white-space: nowrap; overflow: hidden; max-width: 150px; text-overflow: ellipsis; }
+  .result-line { display: flex; justify-content: space-between; align-items: baseline; min-height: 39px; gap: 14px; margin-top: 22px; }
+  .result-line strong { font-size: 19px; line-height: 26px; font-weight: 400; letter-spacing: .02em; }
+  .result-line strong[data-tone="success"] { color: #7ed1d2; }
+  .result-line strong[data-tone="error"] { color: #db7777; }
+  .counter { font-variant-numeric: tabular-nums; font-size: 14px; color: #8d999c; white-space: nowrap; }
+  .counter .current { color: #e6e9e8; font-size: 28px; font-weight: 300; }
+  .segments { display: flex; gap: 3px; width: 100%; height: 3px; margin-top: 8px; }
+  .segments span { background: #344145; height: 3px; flex: 1; min-width: 1px; }
+  .segments span.on { background: #7ed1d2; }
+  .segments.error span.on { background: #db7777; }
+  .monitor-description { font-size: 11px; line-height: 1.65; color: #8d999c; min-height: 22px; padding-top: 9px; }
+  .monitor-description.error { color: #db7777; }
+  .log-head { display: flex; align-items: baseline; justify-content: space-between; margin-top: 33px; border-bottom: 1px solid #344145; padding-bottom: 11px; }
+  .log-head span { font-size: 12px; color: #e6e9e8; }
+  .log-clear { color: #8d999c; background: none; border: 0; padding: 0; font-size: 11px; }
+  .log-clear:hover { color: #e6e9e8; }
+  .logs {
+    min-height: 65px; max-height: 212px; overflow-y: auto; overscroll-behavior: contain;
+    scrollbar-width: thin; scrollbar-color: #344145 transparent;
+    padding: 11px 0 2px; flex: 1;
+    font-family: "Cascadia Mono", Consolas, "Microsoft YaHei UI", monospace;
+    font-variant-numeric: tabular-nums; font-size: 11px; line-height: 1.85;
+  }
+  .log-row { color: #8d999c; white-space: pre-wrap; overflow-wrap: anywhere; margin: 0 0 3px; }
+  .log-row.error { color: #db7777; }
+  .log-row.success { color: #7ed1d2; }
+  .log-row .sign { color: #647074; padding-right: 11px; user-select: none; }
+  .foot { border-top: 1px solid #344145; padding-top: 16px; display: flex; align-items: center; justify-content: space-between; margin-top: 20px; gap: 14px; }
+  .close-control { display: inline-flex; align-items: center; gap: 10px; color: #8d999c; border: 0; background: transparent; padding: 0; font-size: 11px; }
+  .keycap { display: inline-grid; place-items: center; color: #080b0d; background: #e6e9e8; min-width: 34px; height: 20px; padding: 0 3px; font-family: "Segoe UI", sans-serif; font-size: 10px; font-weight: 600; }
+  .close-control:hover:not(:disabled) { color: #e6e9e8; }
+  .close-control:disabled { opacity: .45; }
+  .footnote { color: #8d999c; font-size: 10px; letter-spacing: .04em; text-align: right; }
+  .dialog { border: 1px solid #647074; border-radius: 0; max-width: min(450px, calc(100vw - 40px)); width: 100%; background: #111719; color: #e6e9e8; padding: 30px 32px 24px; box-shadow: none; }
+  .dialog::backdrop { background: rgba(0,0,0,.82); }
+  .dialog .danger-rule { width: 36px; height: 2px; background: #db7777; margin-bottom: 21px; }
+  .dialog h2 { margin: 0 0 13px; font-size: 23px; font-weight: 400; }
+  .dialog p { color: #b8c1c2; font-size: 13px; line-height: 1.9; margin: 0 0 27px; }
+  .dialog-actions { display: flex; justify-content: flex-end; gap: 13px; }
+  .dialog button { border-radius: 0; padding: 12px 16px; min-width: 92px; font-size: 12px; }
+  .dialog .cancel { color: #e6e9e8; border: 1px solid #647074; background: transparent; }
+  .dialog .confirm { color: #080b0d; border: 1px solid #db7777; background: #db7777; }
+  .dialog button:hover { filter: brightness(1.15); }
+  @media (min-width: 1700px) and (min-height: 900px) {
+    .page { padding: 58px 85px 40px; }
+    .hero { min-height: 282px; padding-bottom: 45px; }
+    .workarea { padding-top: 46px; }
+    .actions { margin-top: 51px; }
+    .foot { margin-top: 34px; }
+  }
+  @media (max-height: 760px) and (min-width: 760px) {
+    .page { padding-top: 18px; padding-bottom: 11px; }
+    .masthead { min-height: 31px; }
+    .hero { min-height: 143px; padding-bottom: 19px; }
+    .wordmark { font-size: clamp(94px, 10.3vw, 132px); }
+    .hero-under { margin-top: 19px; }
+    .hero-copy h1 { font-size: 30px; margin-bottom: 10px; }
+    .workarea { padding-top: 19px; min-height: 0; }
+    .discovery { margin-top: 9px; max-height: 56px; min-height: 36px; }
+    .directory-field { margin-top: 10px; }
+    .actions { margin-top: 20px; }
+    .primary, .secondary, .danger { min-height: 48px; }
+    .operation-note { margin-top: 10px; }
+    .monitor .result-line { margin-top: 12px; }
+    .monitor .log-head { margin-top: 15px; }
+    .logs { max-height: 170px; }
+    .foot { margin-top: 10px; padding-top: 9px; }
+  }
+  @media (max-width: 960px) and (min-width: 761px) {
+    .page { padding-left: 31px; padding-right: 31px; }
+    .workarea { column-gap: 31px; grid-template-columns: minmax(0, 1.07fr) minmax(0, .93fr); }
+    .monitor { padding-left: 23px; }
+    .hero { grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); }
+    .primary { padding: 0 12px; min-width: 0; font-size: 15px; }
+    .secondary { padding: 0 14px; }
+    .actions { gap: 8px; }
+  }
+  @media (max-width: 760px) {
+    .page { min-height: 100svh; padding: 23px 24px 19px; }
+    .hero { display: block; min-height: auto; padding: 52px 0 29px; }
+    .wordmark { font-size: clamp(95px, 22vw, 138px); }
+    .hero-copy { margin-top: 37px; }
+    .hero-copy h1 { font-size: 30px; }
+    .workarea { display: flex; flex-direction: column; min-height: 0; padding-top: 23px; gap: 41px; }
+    .discovery { max-height: 97px; }
+    .monitor { border-left: 0; border-top: 1px solid #344145; padding: 25px 0 0; min-height: 255px; }
+    .logs { max-height: 160px; }
+    .foot { margin-top: 28px; }
+  }
+  @media (max-width: 430px) {
+    .page { padding-left: 19px; padding-right: 19px; }
+    .top-right { font-size: 10px; }
+    .actions { gap: 9px; }
+    .primary { padding: 0 10px; width: 47%; font-size: 14px; }
+    .primary .primary-arrow { display: none; }
+    .secondary { padding: 0 11px; font-size: 12px; }
+    .danger { font-size: 11px; padding: 0; }
+    .browse { min-width: 82px; padding: 0 7px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="masthead">
+    <div>
+      <div class="minor-brand">「艾希」</div>
+      <div class="minor-track" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="top-right">双人联机 / 离线安装</div>
+  </header>
+
+  <section class="hero" aria-label="ICEY 双人联机安装器">
+    <div>
+      <p class="wordmark" aria-label="ICEY"><span>I</span><span>C</span><span>E</span><span>Y</span></p>
+      <div class="hero-under"><span class="stroke" aria-hidden="true"></span><small>本地安装程序</small></div>
+    </div>
+    <div class="hero-copy">
+      <h1>双人联机</h1>
+      <p>将联机组件写入 ICEY 游戏目录。<br>先退出游戏，再选择位置。</p>
+    </div>
+  </section>
+
+  <main class="workarea">
+    <section class="setup" aria-labelledby="directory-title">
+      <div class="section-header">
+        <h2 id="directory-title">游戏位置</h2>
+        <span class="aside">请选择包含 ICEY.exe 的文件夹</span>
+      </div>
+      <div class="discovery" id="discovery" aria-label="自动找到的游戏目录">
+        <p class="discovery-empty">正在查找游戏目录…</p>
+      </div>
+      <div class="directory-field">
+        <input id="gamePath" type="text" spellcheck="false" autocomplete="off" aria-label="ICEY 游戏目录" placeholder="输入游戏目录，或点右侧选择" disabled>
+        <button id="browse" type="button" class="browse" disabled>选择文件夹</button>
+      </div>
+      <div id="pathMessage" class="path-message" role="status" aria-live="polite">正在连接本地安装服务…</div>
+      <div class="actions">
+        <button id="install" class="primary" type="button" disabled><span>安装 / 更新</span><i class="primary-arrow" aria-hidden="true"></i></button>
+        <button id="verify" class="secondary" type="button" disabled>校验文件</button>
+        <button id="uninstall" class="danger" type="button" disabled>卸载还原</button>
+      </div>
+      <p class="operation-note">安装前会备份需要替换的文件；卸载时尝试还原。</p>
+    </section>
+
+    <section class="monitor" aria-labelledby="monitor-title">
+      <div class="monitor-heading"><h2 id="monitor-title">执行状态</h2><span id="build" class="build" aria-label="安装器构建号"></span></div>
+      <div class="result-line"><strong id="status" aria-live="polite">等待连接</strong><span class="counter"><span id="written" class="current">0</span> / <span id="total">23</span></span></div>
+      <div id="segments" class="segments" role="progressbar" aria-label="操作进度" aria-valuemin="0" aria-valuemax="23" aria-valuenow="0"></div>
+      <div id="statusDescription" class="monitor-description" aria-live="polite">状态会显示在这里。</div>
+      <div class="log-head"><span>过程记录</span><button id="clearLog" class="log-clear" type="button">清空记录</button></div>
+      <div id="logs" class="logs" role="log" aria-label="安装日志" aria-live="off">
+        <p class="log-row"><span class="sign">/</span>等待操作。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <button id="close" type="button" class="close-control"><span class="keycap">ESC</span><span>退出安装器</span></button>
+    <div class="footnote">所有文件在本机处理 · 无需联网</div>
+  </footer>
+</div>
+
+<dialog id="uninstallDialog" class="dialog" aria-labelledby="uninstallTitle" aria-describedby="uninstallMessage">
+  <div class="danger-rule" aria-hidden="true"></div>
+  <h2 id="uninstallTitle">确认卸载？</h2>
+  <p id="uninstallMessage">将移除联机组件，并尝试还原安装时备份的文件。<br>请确认 ICEY 已退出。</p>
+  <div class="dialog-actions">
+    <button id="cancelUninstall" class="cancel" type="button">取消</button>
+    <button id="confirmUninstall" class="confirm" type="button">卸载并还原</button>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const token = new URLSearchParams(location.search).get('t') || '';
+  const preview = !token;
+  const headers = { 'X-Coop-Token': token };
+  const elements = {
+    discovery: $('discovery'), path: $('gamePath'), browse: $('browse'), message: $('pathMessage'),
+    install: $('install'), verify: $('verify'), uninstall: $('uninstall'),
+    status: $('status'), written: $('written'), total: $('total'), segments: $('segments'),
+    description: $('statusDescription'), logs: $('logs'), clear: $('clearLog'),
+    build: $('build'), close: $('close'), dialog: $('uninstallDialog'),
+    cancel: $('cancelUninstall'), confirm: $('confirmUninstall')
+  };
+  let state = null;
+  let chosenByUser = false;
+  let validated = false;
+  let validating = false;
+  let pathCheckId = 0;
+  let checkTimer = 0;
+  let lastCheckedPath = '';
+  let requestingAction = false;
+  let waitingForStart = false;
+  let seenFinish = false;
+  let pollInProgress = false;
+  let offline = false;
+  let logsCount = 0;
+  let lastResultKey = '';
+  let lastDetectionKey = null;
+  const maxLogRows = 300;
+
+  function isBusy() { return Boolean(requestingAction || waitingForStart || (state && state.running)); }
+  function setMessage(value, tone) {
+    elements.message.textContent = value;
+    elements.message.dataset.tone = tone || 'neutral';
+  }
+  function setDescription(value, error) {
+    elements.description.textContent = value;
+    elements.description.classList.toggle('error', !!error);
+  }
+  function addLog(text, kind) {
+    const logs = elements.logs;
+    const nearBottom = logs.scrollTop + logs.clientHeight >= logs.scrollHeight - 24;
+    if (logsCount === 0) logs.textContent = '';
+    const row = document.createElement('p');
+    row.className = 'log-row';
+    if (kind === 'error') row.classList.add('error');
+    if (kind === 'success') row.classList.add('success');
+    const symbol = document.createElement('span');
+    symbol.className = 'sign';
+    symbol.textContent = kind === 'error' ? '!' : '/';
+    row.appendChild(symbol);
+    row.appendChild(document.createTextNode(String(text || '')));
+    logs.appendChild(row);
+    logsCount++;
+    while (logsCount > maxLogRows) { logs.firstElementChild.remove(); logsCount--; }
+    if (nearBottom) logs.scrollTop = logs.scrollHeight;
+  }
+  function clearLog() {
+    elements.logs.textContent = '';
+    logsCount = 0;
+    addLog('等待操作。');
+  }
+  function classifyLine(line) {
+    const cls = String(line.cls || '').toLowerCase();
+    if (/error|err|fail|red|danger/.test(cls)) return 'error';
+    if (/success|good|ok|green/.test(cls)) return 'success';
+    return '';
+  }
+  function renderDetection(items) {
+    const records = Array.isArray(items) ? items.filter(item => item && typeof item.path === 'string' && item.path.trim()) : [];
+    const detectionKey = JSON.stringify(records.map(item => [item.label || '', item.path, !!item.installed]));
+    if (detectionKey === lastDetectionKey) return; // Preserve keyboard focus while polling.
+    lastDetectionKey = detectionKey;
+    const wrapper = elements.discovery;
+    wrapper.textContent = '';
+    if (!records.length) {
+      const p = document.createElement('p');
+      p.className = 'discovery-empty';
+      p.textContent = '未自动找到游戏。可手动指定安装位置。';
+      wrapper.appendChild(p);
+      return;
+    }
+    records.forEach(item => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.disabled = isBusy();
+      button.setAttribute('aria-pressed', String(elements.path.value.trim() === item.path.trim()));
+      button.title = item.path;
+      const marker = document.createElement('span');
+      marker.className = 'disc-marker';
+      marker.setAttribute('aria-hidden', 'true');
+      const title = document.createElement('span');
+      title.className = 'disc-label';
+      title.textContent = item.label ? `${item.label} · ${item.path}` : item.path;
+      const installed = document.createElement('span');
+      installed.className = 'disc-installed';
+      installed.textContent = item.installed ? '已安装' : '已找到';
+      button.append(marker, title, installed);
+      button.addEventListener('click', () => {
+        chosenByUser = true;
+        setPath(item.path);
+      });
+      wrapper.appendChild(button);
+    });
+  }
+  function refreshDetectionSelection() {
+    Array.from(elements.discovery.querySelectorAll('button')).forEach(button => {
+      const value = button.title.trim();
+      button.setAttribute('aria-pressed', String(elements.path.value.trim() === value));
+      button.disabled = isBusy();
+    });
+  }
+  function refreshButtons() {
+    const busy = isBusy();
+    const ready = !preview && !offline && !busy && validated && !validating;
+    elements.install.disabled = !ready;
+    elements.verify.disabled = !ready;
+    elements.uninstall.disabled = !ready;
+    elements.browse.disabled = preview || offline || busy;
+    elements.path.disabled = preview || offline || busy;
+    elements.close.disabled = busy;
+    refreshDetectionSelection();
+    elements.install.querySelector('span').textContent = (state && state.running && state.action === 'Install') ? '正在安装' : '安装 / 更新';
+  }
+  function setPath(path) {
+    elements.path.value = String(path || '').trim();
+    validated = false;
+    lastCheckedPath = '';
+    refreshDetectionSelection();
+    scheduleCheck(0);
+  }
+  function scheduleCheck(delay) {
+    window.clearTimeout(checkTimer);
+    const path = elements.path.value.trim();
+    validated = false;
+    validating = !!path;
+    ++pathCheckId;
+    refreshButtons();
+    if (!path) { validating = false; setMessage('选择 ICEY 游戏所在的文件夹。'); refreshButtons(); return; }
+    if (preview) { validating = false; setMessage('此页面为外观预览。请通过 Setup.cmd 启动。'); return; }
+    setMessage('正在检查 ICEY.exe…');
+    const id = pathCheckId;
+    checkTimer = window.setTimeout(async () => {
+      try {
+        const data = await api('GET', '/api/check?path=' + encodeURIComponent(path));
+        if (id !== pathCheckId || path !== elements.path.value.trim()) return;
+        validated = Boolean(data && data.ok);
+        lastCheckedPath = path;
+        if (validated) setMessage('游戏目录已确认。', 'valid');
+        else setMessage(data && data.error ? String(data.error) : '不是有效的 ICEY 游戏目录。', 'error');
+      } catch (err) {
+        if (id !== pathCheckId) return;
+        setMessage('目录检查失败：' + err.message, 'error');
+      } finally {
+        if (id === pathCheckId) { validating = false; refreshButtons(); }
+      }
+    }, delay);
+  }
+  async function api(method, route, data) {
+    const opts = { method, headers: { ...headers }, cache: 'no-store' };
+    if (data !== undefined) { opts.headers['Content-Type'] = 'application/json'; opts.body = JSON.stringify(data); }
+    const res = await fetch(route, opts);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const body = await res.json();
+    return body;
+  }
+  function humanStatus(s) {
+    const status = String(s.status || '');
+    if (s.running) {
+      return ({Install:'正在安装', Verify:'正在校验', Uninstall:'正在卸载'})[s.action] || '正在处理';
+    }
+    if (!s.finished) return '准备就绪';
+    if (!s.resultOk) return '操作未完成';
+    return ({Verified:'校验通过', Installed:'安装完成', Uninstalled:'卸载完成', Updated:'更新完成', Success:'操作完成', Completed:'操作完成'})[status] || '操作完成';
+  }
+  function renderProgress(s) {
+    const total = Math.max(0, Math.floor(Number(s.total) || 0));
+    const amount = Math.min(total || 0, Math.max(0, Math.floor(Number(s.written) || 0)));
+    const segmentsCount = Math.max(1, Math.min(total || 23, 80));
+    if (elements.segments.childElementCount !== segmentsCount) {
+      elements.segments.textContent = '';
+      for (let i = 0; i < segmentsCount; i++) elements.segments.appendChild(document.createElement('span'));
+    }
+    const filled = total > 0 ? Math.floor((amount / total) * segmentsCount) : 0;
+    Array.from(elements.segments.children).forEach((el, i) => el.classList.toggle('on', i < filled));
+    elements.segments.classList.toggle('error', !!s.finished && !s.resultOk);
+    elements.segments.setAttribute('aria-valuemax', String(total || 23));
+    elements.segments.setAttribute('aria-valuenow', String(amount));
+    elements.written.textContent = String(amount);
+    elements.total.textContent = String(total || 23);
+  }
+  async function acknowledgeOnce(s) {
+    const key = [s.action, s.status, s.exitCode, s.written, s.total, s.resultOk].join('|');
+    if (key === lastResultKey) return;
+    lastResultKey = key;
+    try { await api('POST', '/api/ack'); } catch (_err) { /* Status rendering must still work. */ }
+  }
+  function applyState(s) {
+    state = s;
+    offline = false;
+    if (s.running || s.finished) waitingForStart = false;
+    elements.build.textContent = s.buildId ? String(s.buildId) : '';
+    const entries = Array.isArray(s.lines) ? s.lines : [];
+    for (const line of entries) {
+      if (typeof line === 'string') addLog(line);
+      else if (line && line.text !== undefined) addLog(line.text, classifyLine(line));
+    }
+    if (!chosenByUser && !elements.path.value.trim() && Array.isArray(s.detect) && s.detect.length) {
+      const auto = s.detect.find(entry => entry && entry.installed && entry.path) || s.detect.find(entry => entry && entry.path);
+      if (auto) setPath(auto.path);
+    }
+    renderDetection(s.detect);
+    renderProgress(s);
+    const statusLabel = humanStatus(s);
+    elements.status.textContent = statusLabel;
+    elements.status.dataset.tone = s.finished ? (s.resultOk ? 'success' : 'error') : 'neutral';
+    if (s.running) {
+      const actionText = ({Install:'写入文件', Verify:'验证文件', Uninstall:'还原文件'})[s.action] || '处理文件';
+      setDescription(`${actionText}中。不要关闭游戏目录或安装器。`);
+      seenFinish = false;
+    } else if (s.finished) {
+      const code = s.exitCode === undefined || s.exitCode === null || String(s.exitCode) === '' ? '' : String(s.exitCode);
+      const details = s.status && String(s.status).toLowerCase() !== String(statusLabel).toLowerCase() ? String(s.status) : '';
+      if (s.resultOk) setDescription((details ? details + ' · ' : '') + '任务已结束。');
+      else setDescription((details ? details + ' · ' : '') + (code ? '错误码 ' + code : '请查看下方记录。'), true);
+      if (!seenFinish) {
+        if (entries.length === 0) addLog(s.resultOk ? '操作完成。' : ('操作失败。' + (code ? ' 错误码 ' + code : '')), s.resultOk ? 'success' : 'error');
+        seenFinish = true;
+        acknowledgeOnce(s);
+      }
+    } else {
+      setDescription('尚未执行操作。');
+      seenFinish = false;
+    }
+    refreshButtons();
+  }
+  async function poll() {
+    if (pollInProgress || preview) return;
+    pollInProgress = true;
+    try {
+      const s = await api('GET', '/api/state');
+      if (!s || typeof s !== 'object') throw new Error('状态格式无效');
+      if (offline) addLog('安装服务已恢复。', 'success');
+      applyState(s);
+    } catch (err) {
+      if (!offline) addLog('本地安装服务连接中断：' + err.message, 'error');
+      offline = true;
+      elements.status.textContent = '连接中断';
+      elements.status.dataset.tone = 'error';
+      setDescription('请确认安装器仍在运行。', true);
+      refreshButtons();
+    } finally { pollInProgress = false; }
+  }
+  async function startAction(action) {
+    if (preview) { addLog('请通过 Setup.cmd 启动安装器，此处仅供预览。'); return; }
+    if (isBusy() || !validated || lastCheckedPath !== elements.path.value.trim()) return;
+    requestingAction = true;
+    waitingForStart = true;
+    seenFinish = false;
+    lastResultKey = '';
+    refreshButtons();
+    const path = elements.path.value.trim();
+    addLog(({Install:'请求安装 / 更新', Verify:'请求校验', Uninstall:'请求卸载还原'})[action] + '：' + path);
+    elements.status.textContent = '正在提交';
+    setDescription('正在请求本地安装服务…');
+    try {
+      const result = await api('POST', '/api/action', { action, path });
+      if (!result || !result.ok) throw new Error(result && result.error ? String(result.error) : '操作未被接受');
+      await poll();
+      if (!state || (!state.running && !state.finished)) {
+        // Wait for the state machine to move; avoid a second click in this interval.
+        window.setTimeout(() => { if (waitingForStart && !requestingAction) { waitingForStart = false; refreshButtons(); } }, 10000);
+      }
+    } catch (err) {
+      waitingForStart = false;
+      addLog('请求失败：' + err.message, 'error');
+      elements.status.textContent = '请求失败';
+      elements.status.dataset.tone = 'error';
+      setDescription(err.message, true);
+    } finally { requestingAction = false; refreshButtons(); }
+  }
+  async function browse() {
+    if (isBusy() || preview) return;
+    elements.browse.disabled = true;
+    try {
+      const r = await api('POST', '/api/browse');
+      if (r && r.ok && r.path) {
+        chosenByUser = true;
+        setPath(r.path);
+      } else if (r && !r.ok && r.error) {
+        setMessage(String(r.error), 'error');
+      }
+    } catch (err) { setMessage('选择文件夹失败：' + err.message, 'error'); }
+    finally { refreshButtons(); }
+  }
+  async function closeApp() {
+    if (elements.dialog.open) { elements.dialog.close(); return; }
+    if (isBusy()) return;
+    if (preview) { setMessage('这是页面预览；正式安装请双击 Setup.cmd。'); return; }
+    elements.close.disabled = true;
+    try {
+      await api('POST', '/api/close');
+      elements.status.textContent = '安装器已关闭';
+      setDescription('可以关闭此浏览器标签页。');
+      window.close();
+    } catch (_err) {
+      elements.close.disabled = false;
+      setDescription('关闭请求没有响应，可直接关闭标签页。', true);
+    }
+  }
+  elements.path.addEventListener('input', () => {
+    chosenByUser = true;
+    scheduleCheck(380);
+  });
+  elements.path.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); scheduleCheck(0); } });
+  elements.browse.addEventListener('click', browse);
+  elements.install.addEventListener('click', () => startAction('Install'));
+  elements.verify.addEventListener('click', () => startAction('Verify'));
+  elements.uninstall.addEventListener('click', () => {
+    if (!isBusy() && validated) {
+      elements.dialog.showModal();
+      elements.cancel.focus();
+    }
+  });
+  elements.cancel.addEventListener('click', () => elements.dialog.close());
+  elements.confirm.addEventListener('click', () => { elements.dialog.close(); startAction('Uninstall'); });
+  elements.clear.addEventListener('click', clearLog);
+  elements.close.addEventListener('click', closeApp);
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    if (elements.dialog.open) return; // Native dialog Escape cancels the destructive action.
+    e.preventDefault();
+    closeApp();
+  });
+  if (preview) {
+    elements.discovery.textContent = '';
+    const text = document.createElement('p');
+    text.className = 'discovery-empty';
+    text.textContent = '未连接安装服务。';
+    elements.discovery.appendChild(text);
+    elements.status.textContent = '界面预览';
+    setDescription('启动 Setup.cmd 后可进行安装、校验和卸载。');
+    setMessage('请从安装包中的 Setup.cmd 启动。');
+    elements.build.textContent = '';
+    refreshButtons();
+  } else {
+    poll();
+    window.setInterval(poll, 900);
+    async function heartbeat() { try { await api('POST', '/api/heartbeat'); } catch (_err) {} }
+    heartbeat();
+    window.setInterval(heartbeat, 8000);
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# 本仓库内容是一个带 sha256 校验清单的离线安装包（见 release-files.json / manifest.json）。
+# 任何换行符规范化都会让校验失败，因此对全部文件关闭 EOL 转换，按原字节入库。
+
+* -text
+
+# 二进制文件，供 GitHub 语言统计与 diff 识别使用
+*.dll   binary
+*.exe   binary
+*.zip   binary
+*.ico   binary

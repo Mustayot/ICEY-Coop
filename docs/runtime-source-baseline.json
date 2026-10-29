@@ -1,0 +1,566 @@
+﻿[
+    {
+        "path":  "src\\Bootstrap\\BootstrapPathResolver.cs",
+        "sha256":  "CD4C06FE87E90F7086C1B8F44ED2CBA851E2825238421EF599FCC3CE181CDB25"
+    },
+    {
+        "path":  "src\\Bootstrap\\Marker.cs",
+        "sha256":  "91F91B332D6B3291A329BE36AEE2FBD6B55AA0EAAF40A9E10CEBC267BD274A77"
+    },
+    {
+        "path":  "src\\Bootstrap\\Plugin.cs",
+        "sha256":  "53C0B5AB3369572AFB6B13F0E849727DA0E4FEAA4476A771FA82312935F7B038"
+    },
+    {
+        "path":  "src\\Bootstrap\\PrivateAssemblyLoader.cs",
+        "sha256":  "55C45213232713F73E57CA88EAAE5C8D91F6BB7A129026F8EC78B83F900F757E"
+    },
+    {
+        "path":  "src\\Bridge\\BridgeContract.cs",
+        "sha256":  "3F2E77D8C3BB69C926DAF4429426630753D6CB1C91B64C27902385C1D03AF424"
+    },
+    {
+        "path":  "src\\Bridge\\LobbyContract.cs",
+        "sha256":  "E3E15F9BBF978B5153AF54476DE48D8E4BDEF2F466DAB216A125629ADF351A8C"
+    },
+    {
+        "path":  "src\\Core\\ActorModel.cs",
+        "sha256":  "A869207F92F599D2CA790EA6C62E73D6561017606C4B91E532F3F062E01A563B"
+    },
+    {
+        "path":  "src\\Core\\ActorRegistry.cs",
+        "sha256":  "BDF94F397BFB275F66ADE3D31B6377AFB5976AE46EA79AD807D4150AEDF1A8AC"
+    },
+    {
+        "path":  "src\\Core\\AnimKey.cs",
+        "sha256":  "E385AC1CD5F24EB1045D7665C53ABFB6C4E3BAC942539FC5FE287A1ED8552408"
+    },
+    {
+        "path":  "src\\Core\\AttackOwnerRegistry.cs",
+        "sha256":  "8376307470FDB75D8949DB792FC0DA6C294385141EE872A92A9D8E4C8B238D4A"
+    },
+    {
+        "path":  "src\\Core\\CheckpointRestoreGate.cs",
+        "sha256":  "4A6917B8F0AFC884B8EA6E9E6BB36FF2ECB524E1277C0B1B7C3BB7EC74AC081E"
+    },
+    {
+        "path":  "src\\Core\\CombatLedger.cs",
+        "sha256":  "AEB150923E14E9E7BDD2E9501873FD46A609E25A54C2426FCAD59DD95C1C5D34"
+    },
+    {
+        "path":  "src\\Core\\CoopSaveProfile.cs",
+        "sha256":  "4AE227AF2B9B978ECE84B1183236F3D07CF399670EBB5F8A691062DF26068472"
+    },
+    {
+        "path":  "src\\Core\\CoopSaveSnapshot.cs",
+        "sha256":  "0274B28A55548AA55EB5B97C7A0C0EF9BADF03EFB93E11A7AE556A38747F9920"
+    },
+    {
+        "path":  "src\\Core\\CoopSaveStore.cs",
+        "sha256":  "DE482A430EA6B2355EABC455EC26DBA38C8A5ABDE9AEEF1163AA74A93627468F"
+    },
+    {
+        "path":  "src\\Core\\EncounterDirector.cs",
+        "sha256":  "0E53F03F67337F3FF176C7DD8B7D0513976EE0DC842BC8E8B698E56AA06AFD84"
+    },
+    {
+        "path":  "src\\Core\\EntityRegistry.cs",
+        "sha256":  "1C0FD7B9D03E4AD394270705AD20B55F809D036341552258EB08A56DC80E2C0B"
+    },
+    {
+        "path":  "src\\Core\\ExecutionCoordinator.cs",
+        "sha256":  "E7F77B9BD319250ED42A35D08DA786E8512963278B07BE3D4D46F474FD37016F"
+    },
+    {
+        "path":  "src\\Core\\HitOutcome.cs",
+        "sha256":  "793C24CADA8DE904F511727BB9305760906280BA41E5D1F1FFBC3AF9BC84C718"
+    },
+    {
+        "path":  "src\\Core\\HostResumeGate.cs",
+        "sha256":  "DD84D1D535E0E52DA454CFC73DF5918C20131CE849E05DD5A24DF4B046AF9EE7"
+    },
+    {
+        "path":  "src\\Core\\Identity.cs",
+        "sha256":  "4CBDFB0CBECA4DC6F5FDD81E798525DA65186335AFB663E785BEC500A31DDCCF"
+    },
+    {
+        "path":  "src\\Core\\InputActions.cs",
+        "sha256":  "C3ACCAAC96C42489CFEED15E8F4B63A8A701A07541CC7F375258594B033E9C60"
+    },
+    {
+        "path":  "src\\Core\\InputComposition.cs",
+        "sha256":  "9F7E320213D88CC058681D663EEDD53DBEB848961AC6525659F8C70B9B231656"
+    },
+    {
+        "path":  "src\\Core\\InputSnapshot.cs",
+        "sha256":  "49CC53F1E651023C34219AD85F57AC5C55BD98728C85D9DCEDBC9CC175609099"
+    },
+    {
+        "path":  "src\\Core\\InputWindow.cs",
+        "sha256":  "9DC594EB733A0809B2EF6E50E5E8D6C7CE13E7164C25C72A3EA31A5F76214001"
+    },
+    {
+        "path":  "src\\Core\\JoinStateMachine.cs",
+        "sha256":  "EF5228601B8BFCAA252FC961C6D14BC6A2FEF1BEB3978F965E803F26DB0D6A58"
+    },
+    {
+        "path":  "src\\Core\\LifecycleCoordinator.cs",
+        "sha256":  "BDEC6CDA82E3B451017B84DA6FE6263B324326AA8BC54581B0696E43D8B20EB1"
+    },
+    {
+        "path":  "src\\Core\\LobbyAddress.cs",
+        "sha256":  "9DD3538C38E4058B65C35C5D186E2B6724F033DE9697C055EFE2357511455DE1"
+    },
+    {
+        "path":  "src\\Core\\PartyGateCentre.cs",
+        "sha256":  "75D17C96FEB11050A35FD688B25A54CE5797988A513720D61273CC687B0C6188"
+    },
+    {
+        "path":  "src\\Core\\PartyGateRule.cs",
+        "sha256":  "67A25E9727A53AC309E2F6A53886E9AC1FEE8DC9C07CE51AF9B6ECC78497C8EB"
+    },
+    {
+        "path":  "src\\Core\\PartyWipeCoordinator.cs",
+        "sha256":  "AED480C0D662756D3066F65401582B1EFE99AE7A5A904D83B79849ADF4B97191"
+    },
+    {
+        "path":  "src\\Core\\PlayerContext.cs",
+        "sha256":  "3E73CA325670E8C55A8FAE9DE4CCA191B43E3DFF6FCDE223D15D432D5D35F901"
+    },
+    {
+        "path":  "src\\Core\\Profiles.cs",
+        "sha256":  "29787E34231A33971C61FBC63AD8CCBC0DE2A02462F4A501AF2E8EA38A90CB46"
+    },
+    {
+        "path":  "src\\Core\\ReconnectTickets.cs",
+        "sha256":  "135C769358328A0E4440370249353CA14137ADB28A30B602285BC101B36EFADA"
+    },
+    {
+        "path":  "src\\Core\\ReconnectWindow.cs",
+        "sha256":  "2A56D0E4F297572ADEF9EA8BC468E3DC1545157E703BA58644BDA00BD51EB102"
+    },
+    {
+        "path":  "src\\Core\\RecoveryOwner.cs",
+        "sha256":  "7073EBE3DEB10A72FD8D3E9B25C1B998D0E838F861C5CDC718B4D575E11536CB"
+    },
+    {
+        "path":  "src\\Core\\RemoteActionRouter.cs",
+        "sha256":  "66FAD8A426D859F4098F1805ACA9090A2DBC5D99AA76CE34AF99F2B23A78FE66"
+    },
+    {
+        "path":  "src\\Core\\ResumeGate.cs",
+        "sha256":  "8C24CA999EC6E0148D2E758226509DE18B06C19C51EDAAF5434A1689664B5F54"
+    },
+    {
+        "path":  "src\\Core\\ReviveGate.cs",
+        "sha256":  "C59EF8A136DF8ADB6A48BF04122A811230F9C5B9AFFB1B6049565DDC47022B32"
+    },
+    {
+        "path":  "src\\Core\\RewardLedger.cs",
+        "sha256":  "2CD0331CB2C55D314D91E795AFB8CFC3BF261C2AC68F41955BEBF2269291686C"
+    },
+    {
+        "path":  "src\\Core\\SaveCompatibility.cs",
+        "sha256":  "DDEFB7A784C7A66C42E107A499AD17627E12BF7CD1FE4E3A49058FEB79A060A6"
+    },
+    {
+        "path":  "src\\Core\\SceneMigration.cs",
+        "sha256":  "9B662FD357D457D14609E19D5A21509AC52B22C4271A5BD17E147C8BE6395510"
+    },
+    {
+        "path":  "src\\Core\\SceneTransitionStateMachine.cs",
+        "sha256":  "EDCBDFE1E9981B4EF83569AC57228F103399B9B259E9B388F535C8687E0B47D9"
+    },
+    {
+        "path":  "src\\Core\\SceneWhitelist.cs",
+        "sha256":  "6E6C0F4390C2530CB55A95FE368E423B65505B782D0BDCBBB415EE6133CBA6E2"
+    },
+    {
+        "path":  "src\\Core\\SessionModel.cs",
+        "sha256":  "8F43989B9158505D71D6B98233C6D9CFF7FC7B3F5AEAD48B8FE5CA6019B737EE"
+    },
+    {
+        "path":  "src\\Core\\SnapshotFollower.cs",
+        "sha256":  "7B2AFBD751DFEE5782DAFE909C289D10DDD7B9396F386DB5692C1D865A46226C"
+    },
+    {
+        "path":  "src\\Core\\StoryDirector.cs",
+        "sha256":  "94CD7B3CAFC4C2DF1EECD10DA1A8887EE90871771A1B7C7E2910B5AF29611739"
+    },
+    {
+        "path":  "src\\Core\\TargetResolver.cs",
+        "sha256":  "BAED73ED77337B308C1F95C5887D5ACA5F615DD57C161F76BBD168163CFC1261"
+    },
+    {
+        "path":  "src\\GameBridge\\BindingManifest.cs",
+        "sha256":  "D47E064E65116AF002F6C6AD9075FBAE9D515A786E850813D88D22763384909D"
+    },
+    {
+        "path":  "src\\GameBridge\\BridgeContext.cs",
+        "sha256":  "8EB37B0E1F571569CF5A0730F01237CA184B5EE7A0CB3C0F2C1E36811BBC2AE3"
+    },
+    {
+        "path":  "src\\GameBridge\\BuildIdentity.cs",
+        "sha256":  "F7AFC1848E8B28897302DE5D8441D90F9DC343B3DF7319E02F5F6EAB899B8241"
+    },
+    {
+        "path":  "src\\GameBridge\\EntryPoint.cs",
+        "sha256":  "6D69F315C76CD2F7876D04A522504E454E75161B0B161551838F5001672C994C"
+    },
+    {
+        "path":  "src\\GameBridge\\PatchInstaller.cs",
+        "sha256":  "458C70C838D95C3E4FF6B735C0E54653F97050DEA5C87A13EE4CA811917BE2DA"
+    },
+    {
+        "path":  "src\\GameBridge\\ProbeBridge.cs",
+        "sha256":  "D53BC78E620172CD4B68DDB397B95155563AA53E91A33F54498E8520113428B9"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\ActorFactory.cs",
+        "sha256":  "BF290A8978E800B04C082AE02AD84414D86E21D785FCBCA0FA0FFCAB8C3C0300"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\ActorRegistry.cs",
+        "sha256":  "CEAB37015798BB228BE3C3C4ABA5F54B35D89A5749BB48AA8B0CBA634869F75C"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\ClientIsolationPatches.cs",
+        "sha256":  "E296E6C09BA66A54F9C8661EABDAE7E665BDC913BF1BDDB4F480B93C4CD77147"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\G25DeathPatches.cs",
+        "sha256":  "667C54209A5012BBAF40CF8FB035C9F8B0736C42A5C796A847E23AEC4EAAEBE7"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\NativeActorBinding.cs",
+        "sha256":  "11A1E719EB1CE620F58B0307390FE1FD270261466FF22721AAA8B46EE14BCD56"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\NativeChargingPatches.cs",
+        "sha256":  "1C2E3235C5D8F592B8D33CBD6B7D1DA8B260944270FA09B3FB70372E51936999"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\NativeDeepCopy.cs",
+        "sha256":  "63F98053553776815B59AE83DA9A1AAC71715507770DE096211800B2B7D2FE38"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\NativeOwnerReadPatches.cs",
+        "sha256":  "B4808773B2122AC1BDB032E3F0C4D7F29EEA10BFEC0D62BB54AC03820BF52B7B"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\NativePlayerBinding.cs",
+        "sha256":  "CCC30EF4663E577015A7397F08827DE71800DF2B3AC461CEFF07024D52B14234"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\P2Anchor.cs",
+        "sha256":  "E3E9FBCC52EBA2E747A1875D1526EFA059F1346755E09DDB09E6EE9155D78748"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\P2CollisionSanitize.cs",
+        "sha256":  "3A6241F239FCE0659952941B7DAAE3014599FDCC378E8B558CF17252DFF265DC"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\RoomEndRequest.cs",
+        "sha256":  "C810786A8676D205786B6989901B388F7C1E3728A53D67A44B1B99128D29BA70"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\T03ProbePatches.cs",
+        "sha256":  "4366F7A8F36C51A7F59D0AC5CB97D911AC9DB235E6E019222DEA1E9A96BA4109"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\T04MovePatches.cs",
+        "sha256":  "8FD99962E19D3CC6428CBE7EEB1DFDE1FD50B8256C06FBE8B2E21655406EC383"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\T05BindingPatches.cs",
+        "sha256":  "8313A384F3999DDF30BFB0324B77C534A34AE5AF63188D68BE603F3D63D69E29"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\T06SkillPatches.cs",
+        "sha256":  "89570222DDA6B49FA5F013EC8F95B0CE605D890151B27FA7205E8447B7DB4FD5"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\T07HurtPatches.cs",
+        "sha256":  "89C00871A5EB99CB996FE7D3D37FB1AC4A31BAB82581BFA6473EA49920E4B0DB"
+    },
+    {
+        "path":  "src\\GameBridge\\Actors\\T08WeaponAnimPatches.cs",
+        "sha256":  "7D2DF1DC2E8D60BBBF585A22AAD1044FADF7AEAB2378184B83E6B5D2473D13E9"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\CombatRouter.cs",
+        "sha256":  "6D6B039A9778F011662EE3AD2ACC9229FD6CA7B97DC397B68A996C53AB13DFC8"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\EncounterAdapter.cs",
+        "sha256":  "CA1EA469F8455E62671A0F61B82EBA2A2ABF3B384D5440A6BB6CDD9A5784F4BC"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\EntityAdapter.cs",
+        "sha256":  "A3D99C5D732D15568D42605056A4FD34AB9C3923AE9269C36592189CC1DD0929"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\ExecutionCandidatePatches.cs",
+        "sha256":  "EA352779B250B0C00CBC65649D6CFD4D48C9F5C29D0C423675B7B0CC9A4916B0"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\ExecutionRouter.cs",
+        "sha256":  "09ADA03B9223FC85E4C552462C2013CEC5E01013C24D3A012A58A5BACB33FCAD"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\HurtOutcomeCapture.cs",
+        "sha256":  "2B1EB95768721942351CE0A1E0D83D9C831AB4C19633B7E549AB919B9D5821E9"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\RewardRouter.cs",
+        "sha256":  "B3827CFCC59F3E2A57D26FB7802CE9D8F4FC527E9608BA4E5357338804D081D7"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\SoftCollisionOwnerPatch.cs",
+        "sha256":  "9960C366CA01A13BBFE7776B860FA89162D2E2460CB8F7C85CC107B1F313582D"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\T07AttackPatches.cs",
+        "sha256":  "3F2BB5A115B4BA2B00EA1D74F1B185D6CDC018D27133913A85D56A19CB460512"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\T08LedgerPatches.cs",
+        "sha256":  "BD6E7ACA983089E77DC030A6929840072841CD45DED647D9926A5054B94F7843"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\T11RewardPatches.cs",
+        "sha256":  "4C9B24C860D3B62EA1D5092B27C84197B3293164D0D70107074FDA661205A299"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\T11TargetPatches.cs",
+        "sha256":  "EE847F01A40A6B0C6F02E54B35012AE9299BC60E452CD1F972F62FE555DA8AAE"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\TargetDirector.cs",
+        "sha256":  "FB4D779374DABB103A77750245C7AF369846C0833CF1275A6644383A59A9BA82"
+    },
+    {
+        "path":  "src\\GameBridge\\Combat\\TDamageCalcPatches.cs",
+        "sha256":  "DF32E9998EA2156F9742DE256BF9D9D19C5C8DD2679650E2193D45FC6A864A00"
+    },
+    {
+        "path":  "src\\GameBridge\\Diagnostics\\TraceWriter.cs",
+        "sha256":  "AA614DC54BFC11BB6C94DC2658EF5C9FBCF659CEEEECB3D68F2E0601E3DFDE3B"
+    },
+    {
+        "path":  "src\\GameBridge\\Lobby\\LobbyRuntimeCleanup.cs",
+        "sha256":  "06526A7B8AEFD34D9DE58D393C4392FF2D1AF627709AFCF6DDB6CE18FB4D4265"
+    },
+    {
+        "path":  "src\\GameBridge\\Lobby\\ProbeBridge.Lobby.cs",
+        "sha256":  "8F204BBECFB1E6F0060F1A9B8F108A6837635312118DDA8726E9FB51AFB24D92"
+    },
+    {
+        "path":  "src\\GameBridge\\Network\\InputAdapter.cs",
+        "sha256":  "E7DC1BC1642A49D4D20A6F3082A4BF192F6E1FBCE30EE03559D948BBEB7A4F12"
+    },
+    {
+        "path":  "src\\GameBridge\\Network\\InputSampler.cs",
+        "sha256":  "1FE4C32C755904DB9E64E3393688C393C6DA188612251A0BD95BF7311D5BEB4B"
+    },
+    {
+        "path":  "src\\GameBridge\\Network\\JoinTransaction.cs",
+        "sha256":  "60200CE3C9ACFF9A653370D5415F34D06B2DF283E669FC26E42F894B0F2EAB43"
+    },
+    {
+        "path":  "src\\GameBridge\\Network\\PendingJoinAdmission.cs",
+        "sha256":  "FBAC875CFFE107A535BE9F300F77EC5A5E43DB55832FF8FF88D0C847A1A8AFE5"
+    },
+    {
+        "path":  "src\\GameBridge\\Network\\ReconnectCredentialStore.cs",
+        "sha256":  "CE3941B52F2AD26D8DCEDF5B679AE0D791CDE523A215EB4626821720EC5AA89A"
+    },
+    {
+        "path":  "src\\GameBridge\\Network\\SessionOrchestrator.cs",
+        "sha256":  "E9BF6A441137502C8884D2B54251CEA0467152CAB164EAB2E59B756BC5A43635"
+    },
+    {
+        "path":  "src\\GameBridge\\Network\\SessionTermination.cs",
+        "sha256":  "D40F2B69F6A72811C5444BBB34C4124609D281AAB26CC432E48C897E6C979CD5"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\ActorPresenter.cs",
+        "sha256":  "FF08E049C38668583E576B7196CE255C16852885D92661C66691AD6435CB4CC1"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\CameraHudAdapter.cs",
+        "sha256":  "DA5D92CADC5D040874BF5A3C4313C44E465824232EC3BA742D94B2A6A9EBF74B"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\ClientBossHud.cs",
+        "sha256":  "9E0B8EDDD6D15E5287842CA9CA46F1F1DE2ABF051430A9E90F11E789983C987E"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\ClientUiGuard.cs",
+        "sha256":  "E681E57B9F79D59D3A83BD54D733403682C1FAB59AE8B786D073DFAC6F82A16C"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\CoopLobbyScreen.cs",
+        "sha256":  "1E2FEBCD7552326BD038B286A5D9D57B900021CCE76766E16EC9D2B3088F78E1"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\EffectCueCapture.cs",
+        "sha256":  "77676422A5B2696ABCF28E658613BFDE00A6F07B674B27D25A7CC9D37BCFE232"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\EffectTargetPath.cs",
+        "sha256":  "BF8B51764D700FFB4AF8825BDCCF083E68BB1D59DE7C240B70594C56A951D89F"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\EncounterPresenter.cs",
+        "sha256":  "A4D7BBF46A1AF23FD32FB945FE1854A4A0A8FD05ACD632BE163D70AEFC4ED3BE"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\EnemyPresenter.cs",
+        "sha256":  "A64EF54C00A4C787295B65C536A8C3BCC267874B1084B088A357FE3FA6750A35"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\ReplicaAnimGuard.cs",
+        "sha256":  "BE920413BBCBB8F62A970748EEE964BE129108B7BFACAE7D8CCB195971907159"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\SpineBodies.cs",
+        "sha256":  "2A8EBAB192D39340714989E696F78C5C469AB23917F322EE442291EDF532A987"
+    },
+    {
+        "path":  "src\\GameBridge\\Presentation\\T16HudCameraPatches.cs",
+        "sha256":  "1FA96EA1BE27B17F7A588294143262817AC75172C0190E5BF242416D7810814F"
+    },
+    {
+        "path":  "src\\GameBridge\\Progression\\CoopRestore.cs",
+        "sha256":  "A71D5F1FA3BD2D993C64AEB802E84F210DBAE22BA54BC32FD5720C42AAF8363C"
+    },
+    {
+        "path":  "src\\GameBridge\\Progression\\CoopSaveWriter.cs",
+        "sha256":  "1E307220BCB4CA6EB1AB5AD02DD5261D1DED8014E9D4B87530215FF6F647A4B5"
+    },
+    {
+        "path":  "src\\GameBridge\\Progression\\HostStartupResume.cs",
+        "sha256":  "BF224745FB281252426049B778E4AC035319E411F33172E8C4207F7E7F17F39D"
+    },
+    {
+        "path":  "src\\GameBridge\\Progression\\NativeSaveGuard.cs",
+        "sha256":  "7382039F72B4F3868EFF7DF89DC99DDFCE0BE3C78F38B872D5C34392B8C82D91"
+    },
+    {
+        "path":  "src\\GameBridge\\Progression\\PartyCheckpointRestore.cs",
+        "sha256":  "4C93A1D478DAD7788903BDA1A8C906CA737E392EDF8363E2450FC19BA73BA821"
+    },
+    {
+        "path":  "src\\GameBridge\\Progression\\PartyRevive.cs",
+        "sha256":  "A908C393BD78B9EEE6A7271BABD9A4803BF9F210C414CC34F91851DD57EAE5CC"
+    },
+    {
+        "path":  "src\\GameBridge\\Story\\CameraCueCapture.cs",
+        "sha256":  "3EE5B964047B378CB91B1E58BBE21D043DBA2B4E23A921774C895583055A5122"
+    },
+    {
+        "path":  "src\\GameBridge\\Story\\ShiSync.cs",
+        "sha256":  "5E6CD918E76EECAA35B05BB5C52A73A52E329E08990939C9639AD97DFA799660"
+    },
+    {
+        "path":  "src\\GameBridge\\Story\\StoryCapture.cs",
+        "sha256":  "1D3F0575735DB1C2EDA13BBFCB4356B47583CF0BF01461A5215BB66E11222B37"
+    },
+    {
+        "path":  "src\\GameBridge\\World\\ClientIsolation.cs",
+        "sha256":  "E62603C8C42EE3EF8AC93CF052C1F39995CBC97EA27116ADC775EFDBCCBE18E6"
+    },
+    {
+        "path":  "src\\GameBridge\\World\\InteractionBridge.cs",
+        "sha256":  "4FBED9363D6AF7A3FA3CEA0DCBEC66FCA70708503D2B3635F6048809AE457F10"
+    },
+    {
+        "path":  "src\\GameBridge\\World\\PartyAssemblyGate.cs",
+        "sha256":  "4137AE35E6C79BFD5F87089E0B75F60539BAF9AB15E17D6DFB7FE8F2D04E667F"
+    },
+    {
+        "path":  "src\\GameBridge\\World\\PromptMirror.cs",
+        "sha256":  "D73DC03E473A028ECE288087097A6F05AC27469CBFE41C160EF76AA60EC829DF"
+    },
+    {
+        "path":  "src\\GameBridge\\World\\ReplicaFactory.cs",
+        "sha256":  "4A3C65050D8A47C3F85E4F5AA0362AFFA6B7377DF9FA5880F4D084DAFE54C0F7"
+    },
+    {
+        "path":  "src\\GameBridge\\World\\SceneLoadGate.cs",
+        "sha256":  "B7D32213A839151F828C7C0D4DDF992C7C76B43268BBAC31961D0D4B5FA23277"
+    },
+    {
+        "path":  "src\\Protocol\\BinaryCodec.cs",
+        "sha256":  "8CE3046D294E2EDA9E286C6D12FDDB3595028545A33C1B8437259668E79C12E0"
+    },
+    {
+        "path":  "src\\Protocol\\CameraCueCodec.cs",
+        "sha256":  "76447F219CDE3D1677963EB5152297014C022496944D13B6AD0CC5A91A144D66"
+    },
+    {
+        "path":  "src\\Protocol\\EffectCueCodec.cs",
+        "sha256":  "CDAD9C170741EF0539F7CA18763450692F64D9D73851B1A0B0D21C5549F99535"
+    },
+    {
+        "path":  "src\\Protocol\\HeaderCodec.cs",
+        "sha256":  "D88F2991BF281B4514E389C6313397C7BC2F22B6048850EE7D611D2C1FC64914"
+    },
+    {
+        "path":  "src\\Protocol\\InputBatch.cs",
+        "sha256":  "CF2CE56B6D0432AFDA20D8FA280CFE86769043992B4D978B0A8269E116A27F24"
+    },
+    {
+        "path":  "src\\Protocol\\InputFrame.cs",
+        "sha256":  "B66F5C87CFF3F6159AA2A29000AE5E73D8A57B96E1CA9EC6AE5BA63800A31789"
+    },
+    {
+        "path":  "src\\Protocol\\Messages.cs",
+        "sha256":  "102229B9D71F0AF6DC0CE4E628A747BB1E49865C9716BE1EF249593BBBF0452E"
+    },
+    {
+        "path":  "src\\Protocol\\ReplicaStore.cs",
+        "sha256":  "686DFF700ABD8FACED057A92125A26376DAB4D9CA037CDA3E8983415AE46897D"
+    },
+    {
+        "path":  "src\\Protocol\\SnapshotAssembler.cs",
+        "sha256":  "2FAF476E7BC82329DDE707D7C2F67F6694EB3F9F64EE3E8B884F140DC6E26A08"
+    },
+    {
+        "path":  "src\\Protocol\\StorySnapshotCodec.cs",
+        "sha256":  "70AFF723544F3E89A09E675D7C0F75F8E7CDE2C2EF8A8D9D87801FE2C0877A6C"
+    },
+    {
+        "path":  "src\\Transport\\INetworkLink.cs",
+        "sha256":  "58930532F6AE23E1968A477251B5D64F6BE02DFB942B5B988C0021BEE4133B13"
+    },
+    {
+        "path":  "src\\Transport\\LoopbackFaultLink.cs",
+        "sha256":  "1E46D2580AF604C377D9866C12EA774BA8687D03A2D1E639897EE183C6D5C61D"
+    },
+    {
+        "path":  "src\\Transport\\RelayLink.cs",
+        "sha256":  "11556CFDBF196CBC41C39917F0C8CEAFFBC58D209FABECABB77596D287BD5484"
+    },
+    {
+        "path":  "src\\Transport\\RelayServer.cs",
+        "sha256":  "0DC88F3034E62EF3B8C67EF95BDECB3A703732F3994DF2F3FE4878FDCE0DE867"
+    },
+    {
+        "path":  "src\\Transport\\RelayTarget.cs",
+        "sha256":  "64315ABB18634B29A639718731B821F6F1BD3FA367CEA9EECCDA90A8453FA80A"
+    },
+    {
+        "path":  "src\\Transport\\ReliableChannel.cs",
+        "sha256":  "1A8EE0DEA00159BE4E72A75B8BD303AA7A0947F220522B3D195F5D092799020C"
+    },
+    {
+        "path":  "src\\Transport\\RoomRegistry.cs",
+        "sha256":  "3E858F6383A8E90A01D9B8C0AB5888891241FEBF847AF7B6A87BBB359DC2D9C1"
+    },
+    {
+        "path":  "src\\Transport\\TcpUdpLink.cs",
+        "sha256":  "106803CA478777A12E1B18AAF9E281FECDC1831E9EF5AC909247D8CE94A655F0"
+    }
+]
