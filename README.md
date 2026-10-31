@@ -1,8 +1,8 @@
-# ICEY Coop · 双人联机模组源码
+# ICEY Coop
 
-这是《ICEY》双人联机模组的完整开发仓库，包含游戏桥接、联机协议、传输、回归测试和安装器源码。游戏本体不在本仓库内。
+这是《ICEY》双人联机模组的完整开发仓库，包含游戏桥接、联机协议、传输、回归测试和安装器源码。
 
-**玩家下载：[GitHub Releases](https://github.com/Mustayot/ICEY-Coop/releases)**。下载发布附件中的完整安装包 ZIP，双方安装同一版本；GitHub 自动生成的 Source code ZIP 是源码，不是可直接安装的联机包。安装方法见 [安装说明](installer/README.md)。
+**玩家下载：[GitHub Releases](https://github.com/Mustayot/ICEY-Coop/releases)**。
 
 ## 目录
 
@@ -58,5 +58,3 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tests/WebSetup.Tests.ps1
 - 历史提交和旧发布保留；不通过强制推送重写历史。
 
 第三方组件许可与对应源码见 installer/licenses、installer/third-party-source 及 installer/THIRD-PARTY.txt。
-
-新增：[客机视觉恢复修复与验证范围](docs/修复-20261029-客机视觉恢复.md)。
