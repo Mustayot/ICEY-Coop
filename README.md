@@ -52,9 +52,4 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tests/WebSetup.Tests.ps1
 
 ## 发布约定
 
-- Git 保存源码、测试、工具及 installer 打包输入。
-- GitHub Releases 附件保存可用安装包 ZIP 与 SHA256 校验文件。
-- 不向 Git 提交游戏本体、个人存档或 artifacts 输出。
-- 历史提交和旧发布保留；不通过强制推送重写历史。
-
 第三方组件许可与对应源码见 installer/licenses、installer/third-party-source 及 installer/THIRD-PARTY.txt。
